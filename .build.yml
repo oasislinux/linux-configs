@@ -1,0 +1,21 @@
+image: alpine/latest
+packages:
+- bison
+- elfutils-dev
+- flex
+- linux-headers
+sources:
+- https://github.com/oasislinux/linux-configs
+artifacts:
+- qemu-bzImage
+environment:
+  VERSION: 5.7
+tasks:
+- fetch: |
+    curl -LO https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-$VERSION.tar.xz
+    tar xfJ linux-$VERSION.tar.xz
+- qemu: |
+    cd linux-$VERSION
+    ./scripts/kconfig/merge_config.sh -n ~/linux-configs/qemu
+    make -j $(nproc)
+    cp arch/x86/boot/bzImage ~/qemu-bzImage
