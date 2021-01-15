@@ -1,6 +1,7 @@
 #
 # General setup
 #
+CONFIG_KERNEL_ZSTD=y
 CONFIG_DEFAULT_INIT="/bin/sinit"
 CONFIG_SYSVIPC=y
 CONFIG_NO_HZ_IDLE=y
