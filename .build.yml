@@ -9,7 +9,7 @@ sources:
 artifacts:
 - qemu-bzImage
 environment:
-  VERSION: 5.10.7
+  VERSION: 5.14.7
 tasks:
 - fetch: |
     curl -LO https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-$VERSION.tar.xz
