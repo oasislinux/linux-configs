@@ -4,6 +4,7 @@ packages:
 - elfutils-dev
 - flex
 - linux-headers
+- xz
 sources:
 - https://github.com/oasislinux/linux-configs
 artifacts:
