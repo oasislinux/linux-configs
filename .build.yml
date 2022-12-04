@@ -10,10 +10,10 @@ sources:
 artifacts:
 - qemu-bzImage
 environment:
-  VERSION: 5.14.7
+  VERSION: 6.0.10
 tasks:
 - fetch: |
-    curl -LO https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-$VERSION.tar.xz
+    curl -LO https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-$VERSION.tar.xz
     tar xfJ linux-$VERSION.tar.xz
 - qemu: |
     cd linux-$VERSION
