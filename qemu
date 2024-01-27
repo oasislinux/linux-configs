@@ -1,3 +1,4 @@
+# CONFIG_WERROR is not set
 # CONFIG_EMBEDDED is not set
 CONFIG_64BIT=y
 CONFIG_9P_FS=y
